@@ -33,15 +33,15 @@ const whenIncomingRequestForRecipe = (request, response) => {
     const recipeObject = dataJsObject.recipes[index];
 
     // create the display of the recipe object
-    let responseOutput = '{ <br>';
+    let htmlResponseContent = '{ <br>';
     const recipeObjectKeysArray = Object.keys(recipeObject);
     recipeObjectKeysArray.forEach((key) => {
-      responseOutput += `"${key}": "${recipeObject[key]}"; <br>`;
+      htmlResponseContent += `"${key}": "${recipeObject[key]}"; <br>`;
     });
-    responseOutput += '}';
+    htmlResponseContent += '}';
 
     // send the object as the response
-    response.send(responseOutput);
+    response.send(htmlResponseContent);
   });
 };
 
