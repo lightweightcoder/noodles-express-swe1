@@ -1,11 +1,13 @@
 {
-  "mainPage": {
+  "navbar": {
     "navbarBrand": { "text": "Noodles", "url": "/" },
     "navbarItemOnion": { "text": "onion recipes", "url": "/category/onion" },
     "navbarItemChicken": {
       "text": "chicken recipes",
       "url": "/category/chicken"
-    },
+    }
+  },
+  "mainPage": {
     "noodleAppHeader": "Noodle Recipes",
     "recipeListHeader": "Recipe List",
     "recipeListItems": [
@@ -25,6 +27,9 @@
       { "text": "Chicken", "url": "/category/chicken" },
       { "text": "Onion", "url": "/category/onion" }
     ]
+  },
+  "categories": {
+    "chicken": [{ "text": "IPOH SHREDDED CHICKEN HOR FUN", "url": "/recipe/0" }]
   },
   "recipes": [
     {
