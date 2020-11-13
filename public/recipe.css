@@ -1,0 +1,23 @@
+body {
+  padding-top: 70px;
+}
+
+.row {
+  justify-content: center;
+}
+
+#main-content-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#ingredients {
+  text-align: left;
+  background-color: thistle;
+  list-style-type: disc;
+}
+
+#instructions {
+  text-align: left;
+  background-color: rgb(127, 201, 235);
+}

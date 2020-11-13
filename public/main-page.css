@@ -1,0 +1,40 @@
+body {
+  padding-top: 70px;
+}
+#main-page-content {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#noodle-app-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://d1e3z2jco40k3v.cloudfront.net/-/media/mccormick-us/recipes/thai-kitchen/s/2000/singapore-rice-noodles-2000.jpg?rev=5538ce4a82da47499f6f96ff53efd1ac&vd=20200628T172230Z&hash=6C328CD9D744E70CA477F441C3BC0626");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100px;
+  max-height: 500px;
+  color: whitesmoke;
+  padding-left: 20px;
+}
+
+#recipe-list-items,
+#category-list-items {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#recipe-list-mainpg,
+#category-list-mainpg {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  #noodle-app-header {
+    min-height: 200px;
+  }
+
+  #recipe-and-category-list {
+    justify-content: space-around;
+  }
+}

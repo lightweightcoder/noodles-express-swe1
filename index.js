@@ -3,8 +3,14 @@ import { read } from './jsonFileStorage.js';
 
 const app = express();
 
+// set the library (template engine || view engine) to use for all requests
+app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+
 const PORT = 3004;
 
+// route callback functions ================================================
 // function to read the index requested and
 // respond with the corresponding recipe data as a raw JSON object
 const whenIncomingRequestForRecipe = (request, response) => {
