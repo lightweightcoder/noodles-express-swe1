@@ -11,9 +11,31 @@ app.use(express.static('public'));
 const PORT = 3004;
 
 // route callback functions ================================================
-// function to read the index requested and
+// request callback function to render the main page data to ejs
+const whenRequestForMainPage = (request, response) => {
+  console.log('request came in');
+
+  // read the JSON file and convert contents to a JS object and pass to callback
+  read('data.json', (dataJsObject, error) => {
+    // return reading error if there is
+    if (error) {
+      console.log('error reading file');
+      response.send(`Error reading file: ${error}`);
+    }
+
+    // if no reading error ----------------------
+    // get the mainpage object from the data.json JS object
+    const { mainPage } = dataJsObject;
+    console.log(dataJsObject);
+
+    // render the main page object to ejs
+    response.render('main-page', mainPage);
+  });
+};
+
+// request callback function to read the recipe index requested and
 // respond with the corresponding recipe data as a raw JSON object
-const whenIncomingRequestForRecipe = (request, response) => {
+const whenRequestForRecipe = (request, response) => {
   console.log('request came in');
 
   // read the JSON file and convert contents to a JS object and pass to callback
@@ -51,8 +73,11 @@ const whenIncomingRequestForRecipe = (request, response) => {
   });
 };
 
-// set the route
-app.get('/recipe/:index', whenIncomingRequestForRecipe);
+// set the route for main page
+app.get('/', whenRequestForMainPage);
+
+// set the route for recipe
+app.get('/recipe/:index', whenRequestForRecipe);
 
 // initialise the request listener port functionality
 app.listen(PORT);
