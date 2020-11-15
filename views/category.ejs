@@ -54,14 +54,11 @@
 
     <div class="row justify-content-center" id="recipe-list-container">
       <div class="col-10 col-md-5 justify-content-center" id="recipe-list">
-        <h2>Chicken Recipes</h2>
+        <h2><%= ingredient %> recipes</h2>
         <ul id="items">
-          <li>
-            <a href="#">IPOH SHREDDED CHICKEN HOR FUN</a>
-          </li>
-          <li>
-            <a href="#">CHICKEN BOLOGNESE</a>
-          </li>
+          <% recipes.forEach((element) => { %>
+          <li><a href="<%= element.appUrl %>"><%= element.label %></a></li>
+          <% }); %>
         </ul>
       </div>
     </div>

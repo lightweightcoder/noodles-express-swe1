@@ -42,40 +42,6 @@ const whenRequestForMainPage = (request, response) => {
 };
 
 // request callback function to render category.ejs with data from data.json
-// const whenRequestForCategory = (request, response) => {
-//   console.log('request came in');
-
-//   // read the JSON file and convert contents to a JS object and pass to callback
-//   read('data.json', (dataJsObject, error) => {
-//     // return reading error if there is
-//     if (error) {
-//       console.log('error reading file');
-//       response.send(`Error reading file: ${error}`);
-//       return;
-//     }
-
-//     // if no reading error ------------------------------------
-//     // // get the ingredient category requested
-//     // const { ingredient } = request.params;
-
-//     // // get the recipes of the ingredient category requested
-//     // const recipes = dataJsObject.recipes.filter((element) => element.category === ingredient);
-
-//     // // get the navbar object from data.json JS object
-//     // const { navbar } = dataJsObject;
-
-//     // // set the data to be sent to category.ejs
-//     // const ejsData = {
-//     //   navbar,
-//     //   recipes,
-//     // };
-
-//     // render the main page object to ejs
-//     response.render('category', ejsData);
-//   });
-// };
-
-// for testing route to render category.ejs with data from data.json
 const whenRequestForCategory = (request, response) => {
   console.log('request came in');
 
@@ -85,28 +51,63 @@ const whenRequestForCategory = (request, response) => {
     if (error) {
       console.log('error reading file');
       response.send(`Error reading file: ${error}`);
+      return;
     }
 
-    // if no reading error ----------------------
+    // if no reading error ------------------------------------
+    // get the ingredient category requested
+    const { ingredient } = request.params;
+
+    // get the recipes of the ingredient category requested
+    const recipes = dataJsObject.recipes.filter((element) => element.category === ingredient);
+
     // get the navbar object from data.json JS object
     const { navbar } = dataJsObject;
-
-    // get the mainpage object from the data.json JS object
-    // const { mainPage } = dataJsObject;
 
     // set the data to be sent to category.ejs
     const ejsData = {
       navbar,
+      ingredient,
+      recipes,
     };
 
     // render the main page object to ejs
     response.render('category', ejsData);
-
-    console.log('response sent');
   });
-
-  console.log('end of request callback fn');
 };
+
+// for testing route to render category.ejs with data from data.json ============
+// const whenRequestForCategory = (request, response) => {
+//   console.log('request came in');
+
+//   // read the JSON file and convert contents to a JS object and pass to callback
+//   read('data.json', (dataJsObject, error) => {
+//     // return reading error if there is
+//     if (error) {
+//       console.log('error reading file');
+//       response.send(`Error reading file: ${error}`);
+//     }
+
+//     // if no reading error ----------------------
+//     // get the navbar object from data.json JS object
+//     const { navbar } = dataJsObject;
+
+//     // get the mainpage object from the data.json JS object
+//     // const { mainPage } = dataJsObject;
+
+//     // set the data to be sent to category.ejs
+//     const ejsData = {
+//       navbar,
+//     };
+
+//     // render the main page object to ejs
+//     response.render('category', ejsData);
+
+//     console.log('response sent');
+//   });
+
+//   console.log('end of request callback fn');
+// };
 
 // request callback function to render recipe.ejs with data from data.json
 const whenRequestForRecipe = (request, response) => {
