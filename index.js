@@ -134,23 +134,18 @@ const whenRequestForRecipe = (request, response) => {
 
     // get the recipe object corresponding to the index
     const recipeObject = dataJsObject.recipes[index];
-    console.log(recipeObject);
 
-    // start of uneeded code from 3.PCE.1 ==========================================
-    // create the display of the recipe object
-    // let htmlResponseContent = '{ <br>';
-    // const recipeObjectKeysArray = Object.keys(recipeObject);
-    // recipeObjectKeysArray.forEach((key) => {
-    //   htmlResponseContent += `"${key}": "${recipeObject[key]}"; <br>`;
-    // });
-    // htmlResponseContent += '}';
+    // get the navbar object from data.json JS object
+    const { navbar } = dataJsObject;
 
-    // // send the object as the response
-    // response.send(htmlResponseContent);
-    // end of uneeded code from 3.PCE.1 =============================================
+    // set the ejs data
+    const ejsData = {
+      navbar,
+      recipeObject,
+    };
 
     // render the main page object to ejs
-    response.render('recipe');
+    response.render('recipe', ejsData);
   });
 };
 

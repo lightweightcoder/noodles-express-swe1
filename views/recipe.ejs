@@ -17,13 +17,15 @@
     />
 
     <!-- My own css -->
-    <link rel="stylesheet" href="/recipe.css" />
+    <link rel="stylesheet" href="/css/recipe.css" />
 
     <title>Noodles</title>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-md">
-      <a href="#" class="navbar-brand">Noodles</a>
+      <a href="<%= navbar.navbarBrand.url %>" class="navbar-brand"
+        ><%= navbar.navbarBrand.text %></a
+      >
       <button
         class="navbar-toggler"
         data-toggle="collapse"
@@ -34,10 +36,14 @@
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link">onion recipes</a>
+            <a href="<%= navbar.navbarItemOnion.url %>" class="nav-link"
+              ><%= navbar.navbarItemOnion.text %></a
+            >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">chicken recipes</a>
+            <a href="<%= navbar.navbarItemChicken.url %>" class="nav-link"
+              ><%= navbar.navbarItemChicken.text %></a
+            >
           </li>
         </ul>
       </div>
@@ -46,21 +52,21 @@
     <div class="container" id="main-content-container">
       <div class="row">
         <div class="col-10" id="recipe-title">
-          <h1>IPOH SHREDDED CHICKEN HOR FUN</h1>
+          <h1><%= recipeObject.label %></h1>
         </div>
       </div>
 
       <div class="row">
         <div class="col-10" id="category">
-          <p>category: chicken</p>
+          <p>category: <%= recipeObject.category %></p>
         </div>
       </div>
 
       <div class="row">
         <img
-          src=".\IPOH-SHREDDED-CHICKEN-HOR-FUN.JPG"
+          src="/images/IPOH-SHREDDED-CHICKEN-HOR-FUN.JPG"
           class="mx-auto"
-          alt="IPOH SHREDDED CHICKEN HOR FUN"
+          alt="<%= recipeObject.label %>"
         />
       </div>
 
