@@ -34,10 +34,24 @@
       "label": "IPOH SHREDDED CHICKEN HOR FUN",
       "appUrl": "/recipe/0",
       "url": "http://www.edamam.com/recipe/udon-noodle-soup-bf283c727cd11fb8ce42b98f09dabbac/noodle",
-      "ingredients": "1 vegetable stock cube\n50ml teriyaki sauce\n1 tbsp vegetable oil\n140g chestnut mushroom, sliced\n½ bunch spring onions, thinly sliced\n140g udon noodle\n200g bag spinach",
+      "ingredients": [
+        "thin hor fun noodles",
+        "dry shiitake mushrooms",
+        "vegetables like gai lan (Chinese broccoli)",
+        "chicken breast"
+      ],
+      "instructions": [
+        "Soak the mushroom in 2 cups of hot water for at least 30 minutes (1 hour if you have the time) while preparing other things and then slice (or you may leave them whole). Save the soaking liquid",
+        "Bring a large pot of water to a boil and blanch the vegetables for 1 minute and then refresh with cold water",
+        "Place the chicken breast with 1 cup of chicken stock in the inner pot of Instant Pot. Close the lid and turn the steam release valve to seal. Press pressure cooker and make sure it's on high pressure. Set the time to 10 minutes and release the pressure immediately after. Wait for 5 minutes before slicing or shredding the meat",
+        "Bring chicken stock to a boil and then put the chicken breast in and simmer for 15 minutes. Turn off the heat and let the residual heat to continue cooking the chicken. Remove and rest for 5 minutes before slicing or shredding the meat",
+        "Strain the liquid from cooking the chicken into a large pot. Add the liquid from soaking the mushrooms. Add 1 litre of chicken stock. Bring to a boil and then add the mushrooms and seasonings and lower the heat to let the mushrooms cook for about 15 minutes. I suggest thickening the soup only when you ready to serve the kai si hor fun",
+        "Bring a large pot of water to a boil. If you are using fresh hor fun, cook the noodles briefly, usually less than 1 minute. It is basically just to heat up the noodles. If you are using dry hor fun like me, cook until the noodles are al dente. Do not rinse the noodles with water. I suggest cooking the noodles only when you are closer to serving the kai si hor fun",
+        "When ready to serve, portion the hor fun into individual bowl or platter accompanied by few stalks of veggie, shredded chicken meat. Bring the soup back to a boil. Give the cornstarch solution a stir and pour into the soup while the other hand is stirring. Keep stirring until the soup is thickened. Generously ladle this thickened soup over the noodles along with some slices of mushrooms. Serve immediately"
+      ],
       "yield": 4,
       "caution": "Sulfites",
-      "image": "https://www.edamam.com/web-img/7b2/7b24a14c8756cc1db75eb216fb593e6d.jpg",
+      "image": "/images/IPOH-SHREDDED-CHICKEN-HOR-FUN.JPG",
       "category": "chicken"
     },
     {
@@ -45,10 +59,27 @@
       "label": "CHICKEN BOLOGNESE",
       "appUrl": "/recipe/1",
       "url": "http://www.edamam.com/recipe/noodle-kugel-recipes-d6452a86e2edb13bbeb305904fd2a7f1/noodle",
-      "ingredients": "1 pound wide egg noodles\n2 8-ounce packages cream cheese, softened\n1 pound (16 ounces) creamed cottage cheese, full fat\n1 1/2 cups sugar\n1 stick salted butter, melted, plus more for greasing the baking dish\n8 eggs\n2 teaspoons vanilla\n1 teaspoon cinnamon\n1 cup dried cherries",
+      "ingredients": [
+        "1 tablespoon olive oil",
+        "1 onion diced",
+        "100 g lardons/diced bacon (preferably smoked)",
+        "2 cloves garlic crushed or grated",
+        "500 g chicken thigh",
+        "400 g tin chopped tomatoes",
+        "200 ml chicken stock (or 1 chicken stock cube dissolved in 200 ml water)",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Place the oil and diced onions in a medium to large saucepan and cook over a low heat, with the lid on for 3 minutes, to soften the onions. Stir occasionally",
+        "Turn the heat up and add the lardons/diced bacon. Fry for 2 minutes, stirring regularly, until the lardons and onions are lightly browned.",
+        "Turn the heat back down and add the garlic. Fry for 1 minute, stirring occasionally.",
+        "Add the chicken, tomatoes, stock and herbs, plus salt and pepper to taste. Bring to the boil, then turn down low and simmer for 20 minutes, without a lid, until the chicken is tender, and the sauce reduced.",
+        "Remove the chicken onto a place and quickly shred with two forks.Return the chicken to the sauce and simmer for another couple of minutes.",
+        "Serve with your choice of pasta shape and sprinkled with parmesan (or cheddar if you prefer)."
+      ],
       "yield": 4,
       "caution": "Sulfites",
-      "image": "https://www.edamam.com/web-img/129/1299cd9a98464c5f76952710aa71aaba",
+      "image": "/images/chicken-bolognese.JPG",
       "category": "chicken"
     },
     {
@@ -56,10 +87,24 @@
       "label": "SHANGHAI SPRING ONION OIL NOODLES (葱油拌面)",
       "appUrl": "/recipe/2",
       "url": "http://www.edamam.com/recipe/pomelo-noodle-salad-e12bae27e714d81595c393266df43a98/noodle",
-      "ingredients": "6 ounces dried somen, or soba noodles\n8 ounces shelled edamame\n2 big handfuls salad or micro greens\nscant ½ teaspoon toasted sesame oil\na few tablespoons of ponzu sauce, to taste\n2/3 cup chopped toasted peanuts\n½ a medium pomelo, segments\nTopping: garlic or chive flowers, or chopped chives",
+      "ingredients": [
+        "4 tbsp cooking oil",
+        "5 stalk spring onion, cut into long sections",
+        "2 tbsp light soy sauce",
+        "2 tbsp dark soy sauce",
+        "2 tsp sugar",
+        "400 g dried thin, round noodles"
+      ],
+      "instructions": [
+        "Pour oil in a wok. Add spring onion. Leave to simmer over a medium low heat until it starts to brown. Take the onion out and set aside (see note).",
+        "Add soy sauce and sugar to the oil. Cook until the sauce starts to bubble. Turn off the heat.",
+        "Meanwhile, bring a large pot of water to a boil. Cook noodles following the instructions on the package. Drain then briefly rinse under running water.",
+        "Place noodles in the wok. Stir well to evenly coat the noodles with the sauce.",
+        "Portion out the noodles into 4 serving bowls. Top with fried spring onion."
+      ],
       "yield": 5,
       "caution": "Gluten",
-      "image": "https://www.edamam.com/web-img/95a/95a02fd8ece7cfb61b7348851262bd03.jpg",
+      "image": "/images/SHANGHAI-SPRING-ONION-OIL-NOODLES.JPG",
       "category": "onion"
     },
     {
@@ -67,10 +112,29 @@
       "label": "RAMEN NOODLES WITH SPRING ONIONS AND GARLIC CRISP",
       "appUrl": "/recipe/3",
       "url": "http://www.edamam.com/recipe/chicken-noodle-soup-recipes-c1348377891b4c1a81648e55b12ebd00/noodle",
-      "ingredients": "One 3 1/2-pound chicken, cut into parts—breast, thighs, backs, wings and neck (if available)\n5 carrots (2 carrots scrubbed clean, but not peeled, cut into 2 inch chunks for the stock, 3 carrots peeled and cut into 1/4-inch rounds for the soup)\n5 ribs of celery (2 ribs cut into 2 inch pieces for the stock, 3 ribs cut into 1/4-inch thick slices for the soup), including celery tops for the stock\n1 onion, quartered (for stock, peel on is okay)\n3 cloves of garlic, peel on, cut in half\n2 to 3 sprigs of fresh thyme (or a teaspoon of dried)\n1 bunch of parsley\n5 whole peppercorns\nsalt\n8 to 12 ounces of egg noodles (depending on how noodle-y you want your soup)\nground black pepper",
+      "ingredients": [
+        "1 bunch spring onions or scallions, very thinly sliced, divided",
+        "1 3\" piece ginger, peeled, thinly sliced",
+        "4 garlic cloves, thinly sliced",
+        "½ cup vegetable or sunflower oil",
+        "½ serrano or other green chile, thinly sliced (with seeds)",
+        "¼ cup finely chopped tender herbs (such as cilantro, mint, and/or basil)",
+        "2 Tbsp. low-sodium soy sauce",
+        "1 tsp. freshly ground black pepper",
+        "½ tsp. kosher salt and sugar",
+        "1 Tbsp. unseasoned rice vinegar",
+        "2 5-oz. packages fresh wavy ramen noodles",
+        "1 Tbsp. unsalted butter, cut into pieces"
+      ],
+      "instructions": [
+        "Place half of spring onions in a large heatproof bowl and set a fine-mesh sieve on top; set aside. Combine remaining spring onions with ginger, garlic, and oil in a small saucepan. Set over medium-high and cook, stirring occasionally, until garlic is golden and scallions are beginning to crisp and turn golden brown, 8–10 minutes.",
+        "Pour mixture through reserved sieve onto spring onions. Turn out garlic crisp in sieve onto paper towels to drain. Stir spring onions in bowl until just softened, about 1 minute. Stir in chile, herbs, soy sauce, vinegar, sesame seeds, pepper, salt, and sugar. Let dressing sit 10 minutes.",
+        "Meanwhile, cook noodles according to package directions. Drain and rinse under warm water to get rid of any excess starch.",
+        "Transfer noodles to bowl with dressing and add butter and half of garlic crisp; toss to coat noodles. Divide among bowls; top with remaining garlic crisp."
+      ],
       "yield": 12,
       "caution": "FODMAP",
-      "image": "https://www.edamam.com/web-img/67d/67dc12e07a0159b512cfee39f807a5f0",
+      "image": "/images/Ramen-Noodles-With-Spring-Onions-and-Garlic-Crisp.JPG",
       "category": "onion"
     }
   ]
