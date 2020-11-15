@@ -28,49 +28,50 @@
       { "text": "Onion", "url": "/category/onion" }
     ]
   },
-  "categories": {
-    "chicken": [{ "text": "IPOH SHREDDED CHICKEN HOR FUN", "url": "/recipe/0" }]
-  },
   "recipes": [
     {
       "source": "BBC Good Food",
-      "label": "Udon noodle soup",
+      "label": "IPOH SHREDDED CHICKEN HOR FUN",
+      "appUrl": "/recipe/0",
       "url": "http://www.edamam.com/recipe/udon-noodle-soup-bf283c727cd11fb8ce42b98f09dabbac/noodle",
       "ingredients": "1 vegetable stock cube\n50ml teriyaki sauce\n1 tbsp vegetable oil\n140g chestnut mushroom, sliced\n½ bunch spring onions, thinly sliced\n140g udon noodle\n200g bag spinach",
       "yield": 4,
       "caution": "Sulfites",
       "image": "https://www.edamam.com/web-img/7b2/7b24a14c8756cc1db75eb216fb593e6d.jpg",
-      "category": "Vegan"
+      "category": "chicken"
     },
     {
       "source": "Smitten Kitchen",
-      "label": "Noodle Kugel recipes",
+      "label": "CHICKEN BOLOGNESE",
+      "appUrl": "/recipe/1",
       "url": "http://www.edamam.com/recipe/noodle-kugel-recipes-d6452a86e2edb13bbeb305904fd2a7f1/noodle",
       "ingredients": "1 pound wide egg noodles\n2 8-ounce packages cream cheese, softened\n1 pound (16 ounces) creamed cottage cheese, full fat\n1 1/2 cups sugar\n1 stick salted butter, melted, plus more for greasing the baking dish\n8 eggs\n2 teaspoons vanilla\n1 teaspoon cinnamon\n1 cup dried cherries",
       "yield": 4,
       "caution": "Sulfites",
       "image": "https://www.edamam.com/web-img/129/1299cd9a98464c5f76952710aa71aaba",
-      "category": "Tree-Nut-Free"
+      "category": "chicken"
     },
     {
       "source": "101 Cookbooks",
-      "label": "Pomelo Noodle Salad",
+      "label": "SHANGHAI SPRING ONION OIL NOODLES (葱油拌面)",
+      "appUrl": "/recipe/2",
       "url": "http://www.edamam.com/recipe/pomelo-noodle-salad-e12bae27e714d81595c393266df43a98/noodle",
       "ingredients": "6 ounces dried somen, or soba noodles\n8 ounces shelled edamame\n2 big handfuls salad or micro greens\nscant ½ teaspoon toasted sesame oil\na few tablespoons of ponzu sauce, to taste\n2/3 cup chopped toasted peanuts\n½ a medium pomelo, segments\nTopping: garlic or chive flowers, or chopped chives",
       "yield": 5,
       "caution": "Gluten",
       "image": "https://www.edamam.com/web-img/95a/95a02fd8ece7cfb61b7348851262bd03.jpg",
-      "category": "Vegan"
+      "category": "onion"
     },
     {
       "source": "Simply Recipes",
-      "label": "Chicken Noodle Soup recipes",
+      "label": "RAMEN NOODLES WITH SPRING ONIONS AND GARLIC CRISP",
+      "appUrl": "/recipe/3",
       "url": "http://www.edamam.com/recipe/chicken-noodle-soup-recipes-c1348377891b4c1a81648e55b12ebd00/noodle",
       "ingredients": "One 3 1/2-pound chicken, cut into parts—breast, thighs, backs, wings and neck (if available)\n5 carrots (2 carrots scrubbed clean, but not peeled, cut into 2 inch chunks for the stock, 3 carrots peeled and cut into 1/4-inch rounds for the soup)\n5 ribs of celery (2 ribs cut into 2 inch pieces for the stock, 3 ribs cut into 1/4-inch thick slices for the soup), including celery tops for the stock\n1 onion, quartered (for stock, peel on is okay)\n3 cloves of garlic, peel on, cut in half\n2 to 3 sprigs of fresh thyme (or a teaspoon of dried)\n1 bunch of parsley\n5 whole peppercorns\nsalt\n8 to 12 ounces of egg noodles (depending on how noodle-y you want your soup)\nground black pepper",
       "yield": 12,
       "caution": "FODMAP",
       "image": "https://www.edamam.com/web-img/67d/67dc12e07a0159b512cfee39f807a5f0",
-      "category": "Peanut-Free"
+      "category": "onion"
     }
   ]
 }

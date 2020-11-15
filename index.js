@@ -41,8 +41,42 @@ const whenRequestForMainPage = (request, response) => {
   });
 };
 
-// request callback function to render data of the category of ingredient requested to ejs
-const whenRequestForCategory = (request, respond) => {
+// request callback function to render category.ejs with data from data.json
+// const whenRequestForCategory = (request, response) => {
+//   console.log('request came in');
+
+//   // read the JSON file and convert contents to a JS object and pass to callback
+//   read('data.json', (dataJsObject, error) => {
+//     // return reading error if there is
+//     if (error) {
+//       console.log('error reading file');
+//       response.send(`Error reading file: ${error}`);
+//       return;
+//     }
+
+//     // if no reading error ------------------------------------
+//     // // get the ingredient category requested
+//     // const { ingredient } = request.params;
+
+//     // // get the recipes of the ingredient category requested
+//     // const recipes = dataJsObject.recipes.filter((element) => element.category === ingredient);
+
+//     // // get the navbar object from data.json JS object
+//     // const { navbar } = dataJsObject;
+
+//     // // set the data to be sent to category.ejs
+//     // const ejsData = {
+//     //   navbar,
+//     //   recipes,
+//     // };
+
+//     // render the main page object to ejs
+//     response.render('category', ejsData);
+//   });
+// };
+
+// for testing route to render category.ejs with data from data.json
+const whenRequestForCategory = (request, response) => {
   console.log('request came in');
 
   // read the JSON file and convert contents to a JS object and pass to callback
@@ -51,17 +85,30 @@ const whenRequestForCategory = (request, respond) => {
     if (error) {
       console.log('error reading file');
       response.send(`Error reading file: ${error}`);
-      return;
     }
 
-    // if no reading error ------------------------------------
-    // get the ingredient category requested
-    const { ingredient } = request.params;
+    // if no reading error ----------------------
+    // get the navbar object from data.json JS object
+    const { navbar } = dataJsObject;
+
+    // get the mainpage object from the data.json JS object
+    // const { mainPage } = dataJsObject;
+
+    // set the data to be sent to category.ejs
+    const ejsData = {
+      navbar,
+    };
+
+    // render the main page object to ejs
+    response.render('category', ejsData);
+
+    console.log('response sent');
   });
+
+  console.log('end of request callback fn');
 };
 
-// request callback function to read the recipe index requested and
-// respond with the corresponding recipe data as a raw JSON object
+// request callback function to render recipe.ejs with data from data.json
 const whenRequestForRecipe = (request, response) => {
   console.log('request came in');
 
@@ -82,21 +129,28 @@ const whenRequestForRecipe = (request, response) => {
     // (i.e. value of index is NaN or not within recipes.length)
     if (isNaN(index) || index > dataJsObject.recipes.length || index < 0) {
       response.status(404).send('Sorry, we cannot find that!');
+      return;
     }
 
     // get the recipe object corresponding to the index
     const recipeObject = dataJsObject.recipes[index];
+    console.log(recipeObject);
 
+    // start of uneeded code from 3.PCE.1 ==========================================
     // create the display of the recipe object
-    let htmlResponseContent = '{ <br>';
-    const recipeObjectKeysArray = Object.keys(recipeObject);
-    recipeObjectKeysArray.forEach((key) => {
-      htmlResponseContent += `"${key}": "${recipeObject[key]}"; <br>`;
-    });
-    htmlResponseContent += '}';
+    // let htmlResponseContent = '{ <br>';
+    // const recipeObjectKeysArray = Object.keys(recipeObject);
+    // recipeObjectKeysArray.forEach((key) => {
+    //   htmlResponseContent += `"${key}": "${recipeObject[key]}"; <br>`;
+    // });
+    // htmlResponseContent += '}';
 
-    // send the object as the response
-    response.send(htmlResponseContent);
+    // // send the object as the response
+    // response.send(htmlResponseContent);
+    // end of uneeded code from 3.PCE.1 =============================================
+
+    // render the main page object to ejs
+    response.render('recipe');
   });
 };
 
