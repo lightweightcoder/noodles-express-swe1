@@ -57,7 +57,9 @@
         <h2><%= ingredient %> recipes</h2>
         <ul id="items">
           <% recipes.forEach((element) => { %>
-          <li><a href="<%= element.appUrl %>"><%= element.label %></a></li>
+          <li>
+            <a href="/recipe/<%= element.index %>"><%= element.label %></a>
+          </li>
           <% }); %>
         </ul>
       </div>

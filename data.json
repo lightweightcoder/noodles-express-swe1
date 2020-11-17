@@ -32,7 +32,6 @@
     {
       "source": "BBC Good Food",
       "label": "IPOH SHREDDED CHICKEN HOR FUN",
-      "appUrl": "/recipe/0",
       "url": "http://www.edamam.com/recipe/udon-noodle-soup-bf283c727cd11fb8ce42b98f09dabbac/noodle",
       "ingredients": [
         "thin hor fun noodles",
@@ -57,7 +56,6 @@
     {
       "source": "Smitten Kitchen",
       "label": "CHICKEN BOLOGNESE",
-      "appUrl": "/recipe/1",
       "url": "http://www.edamam.com/recipe/noodle-kugel-recipes-d6452a86e2edb13bbeb305904fd2a7f1/noodle",
       "ingredients": [
         "1 tablespoon olive oil",
@@ -85,7 +83,6 @@
     {
       "source": "101 Cookbooks",
       "label": "SHANGHAI SPRING ONION OIL NOODLES (葱油拌面)",
-      "appUrl": "/recipe/2",
       "url": "http://www.edamam.com/recipe/pomelo-noodle-salad-e12bae27e714d81595c393266df43a98/noodle",
       "ingredients": [
         "4 tbsp cooking oil",
@@ -110,7 +107,6 @@
     {
       "source": "Simply Recipes",
       "label": "RAMEN NOODLES WITH SPRING ONIONS AND GARLIC CRISP",
-      "appUrl": "/recipe/3",
       "url": "http://www.edamam.com/recipe/chicken-noodle-soup-recipes-c1348377891b4c1a81648e55b12ebd00/noodle",
       "ingredients": [
         "1 bunch spring onions or scallions, very thinly sliced, divided",

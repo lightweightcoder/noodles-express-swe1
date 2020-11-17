@@ -58,6 +58,11 @@ const whenRequestForCategory = (request, response) => {
     // get the ingredient category requested
     const { ingredient } = request.params;
 
+    // add a global index to each recipe
+    dataJsObject.recipes.forEach((element, index) => {
+      element.index = index;
+    });
+
     // get the recipes of the ingredient category requested
     const recipes = dataJsObject.recipes.filter((element) => element.category === ingredient);
 
