@@ -69,13 +69,9 @@
             <% mainPage.recipeListItems.forEach((element) => { %>
             <li><a href="<%= element.url %>"><%= element.text %></a></li>
             <% }); %>
-            <!-- <li>
-              <a href=".\onionNoodles-recipe2.html"
-                >RAMEN NOODLES WITH SPRING ONIONS AND GARLIC CRISP</a
-              >
-            </li> -->
           </ul>
         </div>
+
         <div
           class="col-10 col-md-5 justify-content-center"
           id="category-list-mainpg"
@@ -85,10 +81,18 @@
             <% mainPage.categoryListItems.forEach((element) => { %>
             <li><a href="<%= element.url %>"><%= element.text %></a></li>
             <% }); %>
-            <!-- <li>
-              <a href=".\onion-recipe-list.html">Onion</a>
-            </li> -->
           </ul>
+        </div>
+
+        <div
+          class="col-10 col-md-5 justify-content-center"
+          id="favourite-recipe-list-"
+        >
+          <h2>Favourite Recipes</h2>
+          <% if(favRecipeIndexesObj.favRecipeIndexesArr.length > 0) { %> <%
+          favRecipeIndexesObj.favRecipeIndexesArr.forEach((index) => { %>
+          <a href="/recipe/<%= index %>"><%= recipes[index].label %></a><br />
+          <% }); %> <% }; %>
         </div>
       </div>
     </div>

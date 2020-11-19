@@ -91,6 +91,16 @@
           </ol>
         </div>
       </div>
+
+      <form action="/favourites" method="GET">
+        <input
+          type="text"
+          name="recipe"
+          value="<%= recipeObject.index %>"
+          hidden
+        />
+        <input type="submit" value="Favourite" />
+      </form>
     </div>
 
     <!-- Bootstrap JS -->

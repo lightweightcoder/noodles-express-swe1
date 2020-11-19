@@ -33,10 +33,27 @@ const whenRequestForMainPage = (request, response) => {
     // get the mainpage object from the data.json JS object
     const { mainPage } = dataJsObject;
 
+    // get the recipes object from the data.json JS object
+    const { recipes } = dataJsObject;
+
+    let favRecipeIndexesObj;
+
+    // get the cookie to display the favourited recipes in the main page
+    // if no favourited cookies, parse to main-page empty
+    // favRecipeIndexesObj so there is no syntax error
+    if (request.cookies.favouriteRecipeIndexesObject === undefined) {
+      const favRecipeIndexesArr = [];
+      favRecipeIndexesObj = { favRecipeIndexesArr };
+    } else {
+      favRecipeIndexesObj = request.cookies.favouriteRecipeIndexesObject;
+    }
+
     // set the ejs data
     const ejsData = {
       navbar,
       mainPage,
+      recipes,
+      favRecipeIndexesObj,
     };
 
     // render the main page object to ejs
@@ -110,6 +127,7 @@ const whenRequestForRecipe = (request, response) => {
 
     // get the recipe object corresponding to the index
     const recipeObject = dataJsObject.recipes[index];
+    recipeObject.index = index;
 
     // get the navbar object from data.json JS object
     const { navbar } = dataJsObject;
@@ -121,14 +139,14 @@ const whenRequestForRecipe = (request, response) => {
     };
 
     // create a cookie
-    response.cookie('name', 'tobi');
-    response.cookie('weight', '230');
+    // response.cookie('name', 'tobi');
+    // response.cookie('weight', '230');
 
     // delete a cookie
     // response.clearCookie('name');
 
     // see that the cookies are combined and returned as a string.
-    console.log(request.headers.cookie);
+    // console.log(request.headers.cookie);
 
     // render the main page object to ejs
     response.render('recipe', ejsData);
@@ -164,6 +182,59 @@ app.get('/home', (request, response) => {
   }
 
   response.send(`Current cookie value- visits:${visits}`);
+});
+
+// set the route for getting the favourited recipe
+app.get('/favourites', (request, response) => {
+  // store the favourited recipe index (as a string)
+  const { recipe } = request.query;
+
+  // object to store the array of favourite recipe indexes
+  let favRecipeIndexesObj;
+
+  // create/update the cookie object to send in the response
+  if (request.cookies.favouriteRecipeIndexesObject === undefined) {
+    const favRecipeIndexesArr = [Number(recipe)];
+    favRecipeIndexesObj = { favRecipeIndexesArr };
+    response.cookie('favouriteRecipeIndexesObject', favRecipeIndexesObj);
+  } else {
+    favRecipeIndexesObj = request.cookies.favouriteRecipeIndexesObject;
+
+    favRecipeIndexesObj.favRecipeIndexesArr.push(Number(recipe));
+
+    response.cookie('favouriteRecipeIndexesObject', favRecipeIndexesObj);
+
+    console.log(favRecipeIndexesObj);
+  }
+
+  // read the JSON file and convert contents to a JS object and pass to callback
+  read('data.json', (dataJsObject, error) => {
+    // return reading error if there is
+    if (error) {
+      console.log('error reading file');
+      response.send(`Error reading file: ${error}`);
+    }
+
+    // if no reading error ----------------------
+    // get the navbar object from data.json JS object
+    const { navbar } = dataJsObject;
+
+    // get the mainpage object from the data.json JS object
+    const { mainPage } = dataJsObject;
+
+    // get the recipes object from the data.json JS object
+    const { recipes } = dataJsObject;
+
+    // set the ejs data
+    const ejsData = {
+      navbar,
+      mainPage,
+      recipes,
+      favRecipeIndexesObj,
+    };
+
+    response.render('main-page', ejsData);
+  });
 });
 
 // initialise the request listener port functionality
