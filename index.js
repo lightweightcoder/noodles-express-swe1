@@ -117,6 +117,16 @@ const whenRequestForRecipe = (request, response) => {
       recipeObject,
     };
 
+    // create a cookie
+    response.cookie('name', 'tobi');
+    response.cookie('weight', '230');
+
+    // delete a cookie
+    // response.clearCookie('name');
+
+    // see that the cookies are combined and returned as a string.
+    console.log(request.headers.cookie);
+
     // render the main page object to ejs
     response.render('recipe', ejsData);
   });
@@ -131,6 +141,18 @@ app.get('/category/:ingredient', whenRequestForCategory);
 
 // set the route for recipe
 app.get('/recipe/:index', whenRequestForRecipe);
+
+// set the route for 3.6.1-cookies exercise
+app.get('/home', (request, response) => {
+  let visits = Number(request.cookies.visits); // get the value from the request
+
+  // set a new value of the cookie
+  visits += 1;
+
+  response.cookie('visits', visits); // set a new value to send back
+
+  response.send(`Current cookie value- visits:${visits}`);
+});
 
 // initialise the request listener port functionality
 app.listen(PORT);
