@@ -1,4 +1,5 @@
 import express from 'express';
+import cookieParser from 'cookie-parser';
 import { read } from './jsonFileStorage.js';
 
 const app = express();
@@ -7,6 +8,8 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
+
+app.use(cookieParser());
 
 const PORT = 3004;
 
@@ -144,12 +147,21 @@ app.get('/recipe/:index', whenRequestForRecipe);
 
 // set the route for 3.6.1-cookies exercise
 app.get('/home', (request, response) => {
-  let visits = Number(request.cookies.visits); // get the value from the request
+  let visits;
 
-  // set a new value of the cookie
-  visits += 1;
+  if (request.cookies.visits === undefined) {
+    response.cookie('visits', 1);
+    visits = 1;
+  } else {
+    console.log(request.cookies.visits);
+    visits = Number(request.cookies.visits); // get the value from the request
+    console.log(visits);
 
-  response.cookie('visits', visits); // set a new value to send back
+    // set a new value of the cookie
+    visits += 1;
+
+    response.cookie('visits', visits); // set a new value to send back
+  }
 
   response.send(`Current cookie value- visits:${visits}`);
 });
