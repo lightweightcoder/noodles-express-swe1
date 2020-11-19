@@ -89,6 +89,7 @@
           id="favourite-recipe-list-"
         >
           <h2>Favourite Recipes</h2>
+          <!-- if favRecipeIndexesObj.favRecipeIndexesArr.length = 0, means no favourites have been added so dont run the below code to avoid runtime errors -->
           <% if(favRecipeIndexesObj.favRecipeIndexesArr.length > 0) { %> <%
           favRecipeIndexesObj.favRecipeIndexesArr.forEach((index) => { %>
           <a href="/recipe/<%= index %>"><%= recipes[index].label %></a><br />
